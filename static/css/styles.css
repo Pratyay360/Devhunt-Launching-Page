@@ -481,3 +481,6 @@ ul {
 .footer-primary{
   padding: 1rem;
 }
+.round {
+  border-radius: 50%;
+}
