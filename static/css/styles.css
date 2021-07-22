@@ -103,7 +103,7 @@
   display: inline-flex;
   width: 150px;
   height: 40px;
-  background: url("../images/Devhunt.svg") no-repeat center;
+  background: url("../images/logo_fullwidth.png") no-repeat center;
   background-size: contain;
 }
 .header-logo ::after{
