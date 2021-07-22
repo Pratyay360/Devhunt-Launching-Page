@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
     <link
       rel="icon"
       type="image/png"
@@ -66,10 +73,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h1 class="u-h1">One Stop Social Media For Anyone</h1>
             <p class="u-p">See What You Want Not What We Want</p>
             <div class="hero-buttons">
-              <button  class="u-button">
-                <a href="https://join.slack.com/t/giantsmeet/shared_invite/zt-nrm4nzq8-DzSAM7X7O4saYJLTARGZ1Q" target="_blank" > <img style="border: 3px solid white;padding: 10px;border-radius: 20px;" src="./static/images/joinslack.png" alt="" /> </a>
-              </button>
-              <!-- <button class="u-button is-gray">Get it on Firefox</button> -->
+              <!-- <button  class="u-button">
+                <a href="https://join.slack.com/t/giantsmeet/shared_invite/zt-nrm4nzq8-DzSAM7X7O4saYJLTARGZ1Q" target="_blank" > Pre Register Now </a>
+              </button> -->
+              <button class="u-button " data-bs-toggle="modal" data-bs-target="#exampleModal"><a>Pre Register Now</a></button>
             </div>
           </div>
         </div>
@@ -114,8 +121,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="join" id="notify">
       <div class="u-wrapper">
-        <h4 class="u-h4">Stay Up-To-Date</h4>
-        <a href="https://join.slack.com/t/giantsmeet/shared_invite/zt-nrm4nzq8-DzSAM7X7O4saYJLTARGZ1Q" target="_blank" > <img style="border: 3px solid white;padding: 10px;border-radius: 20px;" src="./static/images/joinslack.png" alt="" /> </a>
+        <h4 class="u-h4">To Get Notified</h4>
+        <button class="u-button" data-bs-toggle="modal" data-bs-target="#exampleModal"><a style="border: 2px solid white;border-radius: 10px;padding: 20px;">Pre Register Now</a></button>
       </div>
     </section>
     <footer class="footer" id="footer">
@@ -134,6 +141,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </footer>
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <form method="POST">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pre Register Now</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Your Name</label>
+                <input type="text" class="form-control" id="recipient-name" required>
+              </div>
+              <div class="mb-3">
+                <label for="reciepent-email" class="col-form-label">Your Email ID</label>
+                <input class="form-control" id="reciepent-email" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Pre Register Now</button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     <script>
       function goToNotifySection() {
         document.getElementById("notify").scrollIntoView();
