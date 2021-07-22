@@ -164,8 +164,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Pre Register Now</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closebtn">Close</button>
+            <button type="submit" class="btn btn-primary" id="submitbtn">Pre Register Now</button>
           </div>
         </div>
       </form>
@@ -187,19 +187,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
 
   form.addEventListener('submit', e => {
-    e.preventDefault()
+    e.preventDefault();
+    disableForm();
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response =>{
         console.log(response);
+        enableForm();
         myModal.hide();
         swal("🎉 Woohoo 🎉", "Your pre-registration has been done successfully", "success");
       })
       .catch(error => {
         console.error('Error!', error.message);
+        enableForm();
         myModal.hide();
         swal("😥 Failed 😥", "Maybe your internet connection is not stable", "error");
       })
   })
 </script>
+
+<script>
+  var submitbtn = document.getElementById("submitbtn");
+  var closebtn = document.getElementById("closebtn");
+  var recipient_name = document.getElementById("recipient-name");
+  var reciepent_email = document.getElementById("reciepent-email");
+
+  function disableForm() {
+    submitbtn.disabled = true;
+    closebtn.disabled = true;
+    recipient_name.readOnly = true;
+    reciepent_email.readOnly = true;
+    submitbtn.innerHTML = '<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>';
+  }
+
+
+  function enableForm() {
+    submitbtn.disabled = false;
+    closebtn.disabled = false;
+    recipient_name.readOnly = false;
+    reciepent_email.readOnly = false;
+    submitbtn.innerHTML = 'Pre Register Now';
+  }
+
+
+  
+  </script>
   </body>
 </html>
