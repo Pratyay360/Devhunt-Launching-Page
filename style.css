@@ -39,7 +39,6 @@ a:hover{
 .logo{
 
     position: absolute;
-    width: 109px;
     height: 73px;
     left: 19px;
     top: 17px;
@@ -68,7 +67,7 @@ a:hover{
 }
 
 .comingsoontext{
-    margin-top: 5rem;
+    margin-top: 10rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
@@ -124,9 +123,10 @@ a:hover{
 .socialbutton{
     margin-top: 10px;
 }
-.socialbutton img{
+.socialbutton a{
     cursor: pointer;
     padding-right: 10px;
+    color: white;
 }
 
 .contactbtn{
@@ -141,6 +141,9 @@ a:hover{
     margin-right: 10px;
 }
 @media screen and (max-width: 600px){ 
+    .logo{
+        height: 50px;
+    }
     .logo_large{
         height: 70px;
     }
