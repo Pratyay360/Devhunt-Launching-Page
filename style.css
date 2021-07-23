@@ -24,6 +24,7 @@ a:hover{
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .container::before {
     content:"";
     display: block;
@@ -67,7 +68,7 @@ a:hover{
 }
 
 .comingsoontext{
-    margin-top: 3rem;
+    margin-top: 5rem;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
@@ -136,10 +137,8 @@ a:hover{
     z-index: 1;
 }
 
-.contactbtn img{
-    width: 40px;
-    height: 40px;
-    margin-right: 5px;
+.contactbtn a{
+    margin-right: 10px;
 }
 @media screen and (max-width: 600px){ 
     .logo_large{
